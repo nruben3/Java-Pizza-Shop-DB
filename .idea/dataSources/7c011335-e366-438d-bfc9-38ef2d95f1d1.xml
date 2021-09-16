@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="pizzadb">
+  <database-model serializer="dbm" dbms="DERBY" family-id="DERBY" format-version="4.15">
+    <root id="1">
+      <ServerVersion>10.8.1.2</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="APP">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="NULLID"/>
+    <schema id="4" parent="1" name="SQLJ"/>
+    <schema id="5" parent="1" name="SYS"/>
+    <schema id="6" parent="1" name="SYSCAT"/>
+    <schema id="7" parent="1" name="SYSCS_DIAG"/>
+    <schema id="8" parent="1" name="SYSCS_UTIL"/>
+    <schema id="9" parent="1" name="SYSFUN"/>
+    <schema id="10" parent="1" name="SYSIBM"/>
+    <schema id="11" parent="1" name="SYSPROC"/>
+    <schema id="12" parent="1" name="SYSSTAT"/>
+    <table id="13" parent="2" name="CUSTOMERS"/>
+    <table id="14" parent="2" name="DRINKS"/>
+    <table id="15" parent="2" name="ORDEREDITEMS"/>
+    <table id="16" parent="2" name="ORDERS"/>
+    <table id="17" parent="2" name="PIZZA"/>
+    <table id="18" parent="2" name="SIDES"/>
+    <column id="19" parent="13" name="PHONENUMBER">
+      <Position>1</Position>
+      <DataType>VARCHAR(15)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="20" parent="13" name="FIRSTNAME">
+      <Position>2</Position>
+      <DataType>VARCHAR(20)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="13" name="LASTNAME">
+      <Position>3</Position>
+      <DataType>VARCHAR(30)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="13" name="EMAIL">
+      <Position>4</Position>
+      <DataType>VARCHAR(254)|12s</DataType>
+    </column>
+    <index id="23" parent="13" name="SQL190409013253110">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PHONENUMBER</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="24" parent="13" name="SQL190409013253110">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PHONENUMBER</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="25" parent="14" name="DRINKID">
+      <Position>1</Position>
+      <DataType>SMALLINT|5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="14" name="DRINKDES">
+      <Position>2</Position>
+      <DataType>VARCHAR(50)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="14" name="PRICE">
+      <Position>3</Position>
+      <DataType>DOUBLE|8s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="28" parent="14" name="SQL190409013253170">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>DRINKID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="29" parent="14" name="SQL190409013253170">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>DRINKID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="30" parent="15" name="ORDERID">
+      <Position>1</Position>
+      <DataType>INTEGER|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="15" name="PIZZAID">
+      <Position>2</Position>
+      <DataType>SMALLINT|5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="15" name="PIZZAQN">
+      <Position>3</Position>
+      <DataType>SMALLINT|5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="15" name="SIDESID">
+      <Position>4</Position>
+      <DataType>SMALLINT|5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="15" name="SIDESQN">
+      <Position>5</Position>
+      <DataType>SMALLINT|5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="15" name="DRINKID">
+      <Position>6</Position>
+      <DataType>SMALLINT|5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="15" name="DRINKQN">
+      <Position>7</Position>
+      <DataType>SMALLINT|5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="37" parent="15" name="SQL190409013253190">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ORDERID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="38" parent="15" name="SQL190409013253192">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PIZZAID</ColNames>
+    </index>
+    <index id="39" parent="15" name="SQL190409013253191">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>SIDESID</ColNames>
+    </index>
+    <index id="40" parent="15" name="SQL190409013253193">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>DRINKID</ColNames>
+    </index>
+    <key id="41" parent="15" name="SQL190409013253190">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ORDERID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="42" parent="15" name="SQL190409013253192">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PIZZAID</ColNames>
+      <RefTableName>PIZZA</RefTableName>
+      <RefKeyName>SQL190409013253130</RefKeyName>
+      <RefColNames>PIZZAID</RefColNames>
+    </foreign-key>
+    <foreign-key id="43" parent="15" name="SQL190409013253191">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>SIDESID</ColNames>
+      <RefTableName>SIDES</RefTableName>
+      <RefKeyName>SQL190409013253150</RefKeyName>
+      <RefColNames>SIDESID</RefColNames>
+    </foreign-key>
+    <foreign-key id="44" parent="15" name="SQL190409013253193">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>DRINKID</ColNames>
+      <RefTableName>DRINKS</RefTableName>
+      <RefKeyName>SQL190409013253170</RefKeyName>
+      <RefColNames>DRINKID</RefColNames>
+    </foreign-key>
+    <column id="45" parent="16" name="ORDERID">
+      <Position>1</Position>
+      <DataType>INTEGER|4s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="16" name="PHONENUMBER">
+      <Position>2</Position>
+      <DataType>VARCHAR(15)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="47" parent="16" name="ORDERTIME">
+      <Position>3</Position>
+      <DataType>TIMESTAMP|93s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="16" name="TOTALPRICE">
+      <Position>4</Position>
+      <DataType>DOUBLE|8s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="49" parent="16" name="SQL190409013253220">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ORDERID</ColNames>
+    </index>
+    <index id="50" parent="16" name="SQL190409013253221">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PHONENUMBER</ColNames>
+    </index>
+    <foreign-key id="51" parent="16" name="SQL190409013253220">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ORDERID</ColNames>
+      <RefTableName>ORDEREDITEMS</RefTableName>
+      <RefKeyName>SQL190409013253190</RefKeyName>
+      <RefColNames>ORDERID</RefColNames>
+    </foreign-key>
+    <foreign-key id="52" parent="16" name="SQL190409013253221">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PHONENUMBER</ColNames>
+      <RefTableName>CUSTOMERS</RefTableName>
+      <RefKeyName>SQL190409013253110</RefKeyName>
+      <RefColNames>PHONENUMBER</RefColNames>
+    </foreign-key>
+    <column id="53" parent="17" name="PIZZAID">
+      <Position>1</Position>
+      <DataType>SMALLINT|5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="54" parent="17" name="PIZZADES">
+      <Position>2</Position>
+      <DataType>VARCHAR(50)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="17" name="PRICE">
+      <Position>3</Position>
+      <DataType>DOUBLE|8s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="56" parent="17" name="SQL190409013253130">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PIZZAID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="57" parent="17" name="SQL190409013253130">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PIZZAID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="58" parent="18" name="SIDESID">
+      <Position>1</Position>
+      <DataType>SMALLINT|5s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="59" parent="18" name="SIDESDES">
+      <Position>2</Position>
+      <DataType>VARCHAR(50)|12s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="60" parent="18" name="PRICE">
+      <Position>3</Position>
+      <DataType>DOUBLE|8s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="61" parent="18" name="SQL190409013253150">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>SIDESID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="62" parent="18" name="SQL190409013253150">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>SIDESID</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

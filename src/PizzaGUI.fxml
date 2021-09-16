@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="346.0" prefWidth="500.0"
+            xmlns="http://javafx.com/javafx/10.0.1" fx:controller="PizzaGUIController">
+    <bottom>
+        <GridPane hgap="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+                  BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+            </BorderPane.margin>
+            <columnConstraints>
+                <ColumnConstraints hgrow="NEVER"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308"/>
+                <ColumnConstraints hgrow="NEVER"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0"/>
+                <RowConstraints fillHeight="false" maxHeight="27.0" minHeight="10.0" prefHeight="27.0"
+                                vgrow="SOMETIMES"/>
+                <RowConstraints fillHeight="false" maxHeight="27.0" minHeight="10.0" prefHeight="30.0"
+                                vgrow="SOMETIMES"/>
+                <RowConstraints fillHeight="false" maxHeight="27.0" minHeight="10.0" prefHeight="30.0"
+                                vgrow="SOMETIMES"/>
+                <RowConstraints fillHeight="false" maxHeight="27.0" minHeight="10.0" prefHeight="30.0"
+                                vgrow="SOMETIMES"/>
+                <RowConstraints fillHeight="false" maxHeight="27.0" minHeight="10.0" prefHeight="30.0"
+                                vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Label prefHeight="17.0" prefWidth="108.0" text="Enter filter text:" GridPane.rowIndex="1"/>
+                <TextField fx:id="filterTextField" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity"
+                           minHeight="-Infinity" prefHeight="30.0" prefWidth="259.0" GridPane.columnIndex="1"
+                           GridPane.rowIndex="1"/>
+                <Button alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                        minWidth="-Infinity" mnemonicParsing="false" onAction="#applyFilterButtonPressed"
+                        prefHeight="27.0" prefWidth="92.0" text="Apply Filter" GridPane.columnIndex="2"
+                        GridPane.rowIndex="1"/>
+                <Label text="Simple Queries:" GridPane.rowIndex="2"/>
+                <Label text="Number of orders and income per day" GridPane.columnIndex="1" GridPane.halignment="CENTER"
+                       GridPane.rowIndex="2"/>
+                <Button mnemonicParsing="false" onAction="#simpleQueriesButtonPressed" prefHeight="27.0"
+                        prefWidth="91.0" text="Search" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                <Label text="Rangle Queries:" GridPane.rowIndex="3"/>
+                <Label text="Query by Phone:" GridPane.rowIndex="4"/>
+                <Label text="Query by Last Name:" GridPane.rowIndex="5"/>
+                <Label text="From" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                <DatePicker fx:id="fromDate" prefHeight="27.0" prefWidth="93.0" GridPane.columnIndex="1"
+                            GridPane.halignment="LEFT" GridPane.rowIndex="3">
+                    <GridPane.margin>
+                        <Insets left="40.0"/>
+                    </GridPane.margin>
+                </DatePicker>
+                <DatePicker fx:id="toDate" prefHeight="27.0" prefWidth="90.0" GridPane.columnIndex="1"
+                            GridPane.halignment="RIGHT" GridPane.rowIndex="3"/>
+                <Label text="To" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+                    <GridPane.margin>
+                        <Insets right="100.0"/>
+                    </GridPane.margin>
+                </Label>
+                <TextField fx:id="phoneTextField" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                <TextField fx:id="lastNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                <Button mnemonicParsing="false" onAction="#dateFilterButtonPressed" prefHeight="27.0" prefWidth="91.0"
+                        text="Search" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+                <Button mnemonicParsing="false" onAction="#phoneQueries" prefHeight="27.0" prefWidth="91.0"
+                        text="Search" GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+                <Button mnemonicParsing="false" onAction="#lastNameQueries" prefHeight="27.0" prefWidth="91.0"
+                        text="Search" GridPane.columnIndex="2" GridPane.rowIndex="5"/>
+            </children>
+        </GridPane>
+    </bottom>
+    <top>
+        <GridPane hgap="8.0" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="NEVER"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <TextArea fx:id="queryTextArea" maxWidth="1.7976931348623157E308" prefRowCount="3"
+                          promptText="Enter query here the press Submit Query" wrapText="true"/>
+                <Button mnemonicParsing="false" onAction="#submitQueryButtonPressed" text="Submit Query"
+                        GridPane.columnIndex="1"/>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+            </BorderPane.margin>
+        </GridPane>
+    </top>
+</BorderPane>

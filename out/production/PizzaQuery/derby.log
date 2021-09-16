@@ -1,0 +1,17 @@
+Sun Apr 07 16:00:18 EDT 2019 : Apache Derby Network Server - 10.8.1.2 - (1095077) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+Sun Apr 07 16:00:18 EDT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.8.1.2 - (1095077): instance a816c00e-0169-f963-253c-00002138bd1b 
+on database directory /Users/noahruben/NetBeansProjects/DisplayQueryResults/src/pizzadb  with class loader sun.misc.Launcher$AppClassLoader@6f94fa3e 
+Loaded from file:/Applications/glassfish3/javadb/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_201-b09
+user.dir=/Applications/glassfish3/javadb
+derby.system.home=/Users/noahruben/NetBeansProjects/DisplayQueryResults/src
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Sun Apr 07 16:50:36 EDT 2019: Shutting down Derby engine
+----------------------------------------------------------------
+Sun Apr 07 16:50:36 EDT 2019:
+Shutting down instance a816c00e-0169-f963-253c-00002138bd1b on database directory /Users/noahruben/NetBeansProjects/DisplayQueryResults/src/pizzadb with class loader sun.misc.Launcher$AppClassLoader@6f94fa3e 
+----------------------------------------------------------------
